@@ -290,6 +290,20 @@ $utilities: map.merge(
     // scss-docs-end utils-flex
     // Margin utilities
     // scss-docs-start utils-spacing
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      values: (
+        auto: auto,
+        default: default,
+        pointer: pointer,
+        text: text,
+        move: move,
+        not-allowed: not-allowed,
+        wait: wait,
+        help: help,
+      )
+    ),
     "margin": (
       responsive: true,
       property: margin,
@@ -465,6 +479,19 @@ $utilities: map.merge(
         4: var(--border-radius-xl),
         5: var(--border-radius-xxl),
         circle: 50%,
+      )
+    ),
+    "weight": (
+      property: font-weight,
+      class: weight,
+      values: (
+        null: $font-weight-normal,
+        0: $font-weight-lighter,
+        1: $font-weight-light,
+        2: $font-weight-normal,
+        3: $font-weight-medium,
+        4: $font-weight-semibold,
+        5: $font-weight-bold,
       )
     ),
     "rounded-top": (

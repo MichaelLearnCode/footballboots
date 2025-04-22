@@ -8,7 +8,6 @@
             --#{$name + if($key == null, "", '-' + $key)}: #{$color};
         } 
     }
-    --gradient: #{$gradient};
     --white: #{$white};
     --black: #{$black};
     --box-shadow: #{$box-shadow};

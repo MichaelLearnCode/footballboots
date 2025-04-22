@@ -22,10 +22,10 @@ h1,.h1{
   @include default-typography($fz: 25.92px,$fw: 700);
 }
 
-h1,.h2{
+h2,.h2{
   @include default-typography($fz: 21.6px, $fw: 700);
 }
 
-h1,.h3{
+h3,.h3{
   @include default-typography($fz: 18px)
 }

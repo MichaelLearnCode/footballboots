@@ -1,4 +1,15 @@
 @use './base';
-@use './components';
 @use './layouts';
-@use './pages';
+
+.nav {
+    .nav-item{
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: #343a40;
+            border-radius: 5px;
+        }
+    }
+    .nav-menu.collasped{
+        display: none;
+    }
+}
