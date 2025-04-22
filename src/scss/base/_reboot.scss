@@ -1,0 +1,31 @@
+
+@use '../vendors/resetcss';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@mixin default-typography($ff: "Roboto",$fw: 400, $fz, $fc: #222831, $ls: 0, $lh: 1.45){
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fz;
+  color: $fc;
+  letter-spacing: $ls;
+  line-height: $lh;
+}
+body{
+  @include default-typography($fz: 15px)
+}
+
+h1,.h1{
+  @include default-typography($fz: 25.92px,$fw: 700);
+}
+
+h1,.h2{
+  @include default-typography($fz: 21.6px, $fw: 700);
+}
+
+h1,.h3{
+  @include default-typography($fz: 18px)
+}

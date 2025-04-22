@@ -1,0 +1,7 @@
+@use "../abstracts/variables" as *;
+@use "../mixins/rfs" as *;
+// Responsive containers that are 100% wide until a breakpoint
+
+@each $font in $fonts{
+    @include render-display($font, $display-config, $display-breakpoints);
+}

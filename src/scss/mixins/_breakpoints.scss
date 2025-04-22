@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as var;
+@use 'sass:map';
+
+@function breakpoint-min($name, $breakpoints: var.$grid-breakpoints) {
+    $min: map.get($breakpoints, $name); // lặp qua các breakpoints, $min là value của breakpoint có key bằng $name
+    @return if($min != 0, $min, null); // xét $min, nếu $min = 0 (tức là 'xs') thì sẽ trả về null, nếu không trả về giá trị $minmin
+  }
+
+@function breakpoint-infix($name, $breakpoints: var.$grid-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}"); //kiểm tra nếu là xs thì infix là chuỗi rỗng, còn nếu khác xs thì sẽ là "-$name", ví dụ "-xl","-xxl",...
+}
+
+@mixin media-breakpoint-up($name, $breakpoints: var.$grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints); //$min là nút mà breakpoint xảy ra. ví dụ xs: 0, sm: 576px
+  @if $min {
+    @media (min-width: $min) { //nếu mà là sm -> xxl thì sẽ có media query, nếu là xs thì sẽ là mặc định -> Mobile First
+      @content; //phần thân được khai báo ở nơi khác
+    }
+  } @else { //đây là trường hợp xs, khi đó không cần dùng media query
+    @content;
+  }
+}

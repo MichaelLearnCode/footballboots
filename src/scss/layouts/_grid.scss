@@ -1,0 +1,11 @@
+@use '../mixins/grid' as grid_mixin;
+
+.row{
+    @include grid_mixin.make-row();
+
+    > *{
+        @include grid_mixin.make-col-ready();
+    }
+}
+
+@include grid_mixin.make-grid-columns();

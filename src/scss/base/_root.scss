@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as *;
+@use 'sass:meta';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    @each $name, $colors in $color-themes {
+        @each $key, $color in $colors{
+            --#{$name + if($key == null, "", '-' + $key)}: #{$color};
+        } 
+    }
+    --gradient: #{$gradient};
+    --white: #{$white};
+    --black: #{$black};
+    --box-shadow: #{$box-shadow};
+    --box-shadow-sm: #{$box-shadow-sm};
+    --box-shadow-lg: #{$box-shadow-lg};
+    --border-color: #{$border-color};
+    --border-color-translucent: #{$border-color-translucent};
+    --border-radius: #{$border-radius};
+    --border-radius-sm: #{$border-radius-sm};
+    --border-radius-lg: #{$border-radius-lg};
+    --border-radius-xl: #{$border-radius-xl};
+    --border-radius-xxl: #{$border-radius-xxl};
+    --border-radius-pill: #{$border-radius-pill};
+    --border-width: #{$border-width};
+    --body-color: #{$body-color};
+    --body-bg: #{$body-bg};
+    --tertiary-bg: #{$body-tertiary-bg};
+    --tertiary-color: #{$body-tertiary-color};
+}

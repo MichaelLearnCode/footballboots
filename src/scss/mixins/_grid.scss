@@ -1,0 +1,118 @@
+@use "../abstracts/variables" as var;
+@use "../mixins/breakpoints" as *;
+@use 'sass:math';
+@use 'sass:map';
+
+@mixin make-row($gutter: var.$grid-gutter-width) {
+  --gutter-x: #{$gutter};
+  --gutter-y: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--gutter-y));
+  margin-right: calc(-0.5 * var(--gutter-x));
+  margin-left: calc(-0.5 * var(--gutter-x));
+}
+
+@mixin make-col($size: false, $columns: var.$grid-columns) {
+  @if $size {
+    flex: 0
+      0
+      math.percentage(
+        math.div($size,$columns)
+      );
+      min-width: math.percentage(
+        math.div($size,$columns)
+      ); //$size là số cột muốn chiếm. ví dụ size = 6, và đang theo columns 12, thì col này sẽ chiếm 6/12 là 50% chiều ngang
+  } @else {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+
+  padding-right: calc(var(--gutter-x) * 0.5);
+  padding-left: calc(var(--gutter-x) * 0.5);
+}
+
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@mixin row-cols($count) {
+  > * {
+    flex: 0 0 auto;
+    width: math.percentage(math.div(1, $count));
+  }
+}
+
+@mixin make-col-ready() {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%; // Prevent `.col-auto`, `.col` (& responsive variants) from breaking out the grid
+  padding-right: calc(var(--gutter-x) * .5); 
+  padding-left: calc(var(--gutter-x) * .5); 
+  margin-top: var(--gutter-y);
+}
+
+@mixin make-grid-columns(
+  $columns: var.$grid-columns,
+  $gutter: var.$grid-gutter-width,
+  $breakpoints: var.$grid-breakpoints
+) {
+  @each $breakpoint in map.keys($breakpoints) {
+    $infix: breakpoint-infix(
+      $breakpoint,
+      $breakpoints
+    ); //lấy ra infix của mỗi breakpoint, xs sẽ không có vì là chuỗi rỗngrỗng
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      .col#{$infix} {
+        //tạo .col, .col-sm, .col-md,....
+        flex: 1 0 0;
+      }
+
+      .row-cols#{$infix}-auto > * {
+        //tạo row-cols-auto, row-cols-sm-auto, ...
+        @include make-col-auto();
+      }
+
+      @if var.$grid-row-columns > 0 {
+        @for $i from 1 through var.$grid-row-columns {
+          .row-cols#{$infix}-#{$i} {
+            //xây dựng css cho row-cols, 1 -> 6, con của row-cols sẽ có width 1/i,vd row-cols-1 -> row có 1 col và width = 100%, row-cols-2 row có 2 cols mỗi col 50%;
+            @include row-cols($i);
+          }
+        }
+      }
+
+      .col#{$infix}-auto {
+        //
+        @include make-col-auto();
+      }
+
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .col#{$infix}-#{$i} {
+            @include make-col(
+              $i,
+              $columns
+            ); //tạo col-1 1-> col-{columns} ở đây là col-12
+          }
+        }
+      }
+
+      @each $key, $value in var.$gutters {
+        .g#{$infix}-#{$key},
+        .gx#{$infix}-#{$key} {
+          --gutter-x: #{$value};
+        }
+
+        .g#{$infix}-#{$key},
+        .gy#{$infix}-#{$key} {
+          --gutter-y: #{$value};
+        }
+      }
+    }
+  }
+}

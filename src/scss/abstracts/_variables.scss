@@ -1,0 +1,431 @@
+$enable-important-utilities: true;
+
+// colors
+$black: #222631;
+$white: #fff;
+$gradient: linear-gradient(to right, #eb2702 3%, #ff7d25 75%, #ff9d5a 100%);
+$primary: (
+    null: #E24C32,
+    "DC1": #47130A,
+    "DC2": #9C2A16,
+    "LC1": #E66751,
+    "LC2": #EB8370,
+    "LC3": #EF9E8F,
+    "LC4": #F8D4CE,
+    "LC5": #FCEFED
+);
+$neutral-gray-1: #F0F0F0;
+$neutral-gray-2: #E0E0E0;
+$neutral-gray-3: #C2C2C2;
+$neutral-gray-4: #A3A3A3;
+$neutral-gray-5: #858585;
+$neutral-gray-6: #666666;    
+$neutral-gray-7: #383E46;
+$neutral-gray-8: #212832;
+
+$neutral-grays: (
+    1: $neutral-gray-1,
+    2: $neutral-gray-2,
+    3: $neutral-gray-3,
+    4: $neutral-gray-4,
+    5: $neutral-gray-5,
+    6: $neutral-gray-6,
+    7: $neutral-gray-7,
+    8: $neutral-gray-8,
+);
+
+$success-1: #209B25;
+$success-2: #95E999;
+$success-3: #EAFBEB;
+$successes: (
+    1: $success-1,
+    2: $success-2,
+    3: $success-3
+);
+$warning-1: #FDC500;
+$warning-2: #FED02C;
+$warning-3: #FFFBEB;
+$warnings: (
+    1: $warning-1,
+    2: $warning-2,
+    3: $warning-3
+);
+
+$infor-1: #3366FF;
+$infor-2: #2E9DFF;
+$infor-3: #E9F6FE;
+$infors: (
+    1: $infor-1,
+    2: $infor-2,
+    3: $infor-3
+);
+
+$error-1: #D70801;
+$error-2: #FE564B;
+$error-3: #FFEEEA;
+$errors: (
+    1: $error-1,
+    2: $error-2,
+    3: $error-3
+);
+
+$color-themes: (
+    'error': $errors,
+    'infor': $infors,
+    'success': $successes,
+    'neutral-gray': $neutral-grays,
+    'primary': $primary,
+);
+
+$bg-primary: #D34127;
+$bg-dark: #222831;
+$bg-medium: #393E46;
+$bg-bright: #D2D2D2;
+$bg-light: #EFEFEF;
+$bg-white: #fff;
+$bg: (
+    "primary": $bg-primary,
+    "dark": $bg-dark,
+    "medium": $bg-medium,
+    "bright": $bg-bright,
+    "light": $bg-light,
+    "white": $bg-white,
+);
+
+
+$text: $bg;
+// body
+$body-color:                #383E46 !default;
+$body-bg:                   $white !default;
+$body-tertiary-color:       rgba($body-color, .5) !default;
+$body-tertiary-bg:          #A3A3A3 !default;
+
+$body-emphasis-color:       $black !default;
+
+// start spacers
+$spacer: 4px !default;
+$spacers: (
+  0: 0,
+  1: $spacer,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
+  5: $spacer * 5,
+  6: $spacer * 6,
+  7: $spacer * 7,
+  8: $spacer * 8,
+  9: $spacer * 10,
+  10: $spacer * 12,
+  11: $spacer * 14,
+  12: $spacer * 16,
+  13: $spacer * 18,
+  14: $spacer * 20
+  
+) !default;
+// end spacers
+// start container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1376px
+) !default;
+// end container
+// start grid-breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1320px
+) !default;
+// end grid-breakpoints
+// start grid
+$grid-columns: 12 !default;
+$grid-row-columns: 6 !default;
+$grid-gutter-width: 4px !default;
+$gutters: $spacers;
+//end grid
+$container-padding-x: $grid-gutter-width !default;
+// start border
+$border-width: 1px !default;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+) !default;
+$border-style:                solid !default;
+$border-color:                #dee2e6 !default;
+$border-color-translucent:    rgba($black, .175) !default;
+// scss-docs-start border-radius-variables
+$border-radius:               .375rem !default;
+$border-radius-sm:            .25rem !default;
+$border-radius-lg:            .5rem !default;
+$border-radius-xl:            1rem !default;
+$border-radius-xxl:           2rem !default;
+$border-radius-pill:          50rem !default;
+//end border
+// start zindex
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3
+) !default;
+// end zindex
+// start font-weight
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-semibold:        600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+// end font-weight
+// start display
+$font-size-base: 14px;
+$line-height-base: 1.45;
+$display-breakpoints: (
+    xs: 0,
+    md: 768px
+);
+
+$display-config: (
+    name: "name",
+    value: "values",
+    properties: "line-height" "letter-spacing" "font-weight" "font-size"
+);
+
+
+$display-1: (
+    xs: 110% 1px $font-weight-semibold 16px,
+    md: 110% 1px $font-weight-semibold 20px
+);
+
+$display-2: (
+    xs: 135% 0.5px $font-weight-semibold 12px,
+    md: 135% 0.5px $font-weight-semibold 16px
+);
+
+
+$big-title-1: (
+    xs: 130% 1px $font-weight-semibold 32px,
+    md: 130% 1px $font-weight-semibold 40px
+);
+
+$big-title-2: (
+    xs: 125% 1px $font-weight-bold 24px,
+    md: 125% 1px $font-weight-semibold 32px
+);
+
+$heading-1: (
+    xs: 135% 0.5px $font-weight-semibold 18px,
+    md: 134% 1px $font-weight-semibold 24px
+);
+
+$heading-2: (
+    xs: 135% 0.5px $font-weight-semibold 16px,
+    md: 130% 0 $font-weight-semibold 20px
+);
+
+$fonts:(
+    (
+        name: 'display',
+        values: (
+            1: $display-1,
+            2: $display-2
+        )
+    ),
+    (
+        name: 'big-title',
+        values: (
+            1: $big-title-1,
+            2: $big-title-2
+        )
+    ),
+    (
+        name: 'heading',
+        values: (
+            1: $heading-1,
+            2: $heading-2
+        )
+    ),
+    (
+        name: 'description',
+        values: 142% 0.5px $font-weight-normal 18px,
+    ),
+    (
+        name: 'description-small',
+        values: 135% 0 $font-weight-normal 10px,
+    ),
+    (
+        name: 'button-label',
+        values: 140% 0 $font-weight-bold 16px,
+    ),
+    (
+        name: 'body-1',
+        values: 140% 0 $font-weight-normal 16px,
+    ),
+    (
+        name: 'body-2',
+        values: 130% 0 $font-weight-normal 14px,
+    ),
+    (
+        name: 'sub-heading',
+        values: 130% 0 $font-weight-semibold 14px,
+    ),
+    (
+        name: 'small-caption',
+        values: 135% 0 $font-weight-medium 12px,
+    ),
+    (
+        name: 'extrag-small',
+        values: 150% 0 $font-weight-semibold 10px,
+    ),
+    (
+        name: 'small-headline',
+        values: 135% 1px $font-weight-medium 12px,
+    ),
+    (
+        name: 'extra-small',
+        values: 135% 0 $font-weight-semibold 10px,
+    )
+);
+
+// $fonts: ($displays $big-titles $headings 
+// $description $button-label $body-1 $body-2 
+// $sub-heading $small-caption $extrag-small 
+// $small-headline $extra-small);
+// end display
+// start shadow
+$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+// end shadow
+// start button
+$btn-padding-x: 0.75rem;
+$btn-padding-y: 0.375rem;
+$btn-font-size: 16px;
+$btn-line-height: 140%;
+$btn-font-weight: $font-weight-bold;
+$btn-color: $black;
+$btn-bg: $neutral-gray-1;
+$btn-border-width: 1px;
+$btn-border-color: transparent;
+$btn-border-radius: $border-radius;
+// end button
+//start card
+$card-spacer-y:                     $spacer !default;
+$card-spacer-x:                     $spacer !default;
+$card-title-spacer-y:               $spacer * .5 !default;
+$card-title-color:                  null !default;
+$card-subtitle-color:               null !default;
+$card-border-width:                 var(--border-width) !default;
+$card-border-color:                 var(--border-color-translucent) !default;
+$card-border-radius:                var(--border-radius) !default;
+$card-box-shadow:                   $box-shadow !default;
+$card-img-overlay-padding:          $spacer !default;
+$card-cap-padding-y:                $card-spacer-y * .5 !default;
+$card-cap-padding-x:                $card-spacer-x !default;
+$card-cap-color:                    null !default;
+$card-cap-bg:                       null !default;
+// end card
+// start zindex config
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-offcanvas-backdrop:         1040 !default;
+$zindex-offcanvas:                  1045 !default;
+$zindex-modal-backdrop:             1050 !default;
+$zindex-modal:                      1055 !default;
+$zindex-popover:                    1070 !default;
+$zindex-tooltip:                    1080 !default;
+$zindex-toast:                      1090 !default;
+// end zindex config
+// start dropdown
+$dropdown-min-width:                10rem !default;
+$dropdown-padding-x:                0 !default;
+$dropdown-padding-y:                0rem !default;
+$dropdown-spacer:                   .125rem !default;
+$dropdown-font-size:                $font-size-base !default;
+$dropdown-color:                    var(--body-color) !default;
+$dropdown-bg:                       var(--body-bg) !default;
+$dropdown-border-color:             var(--border-color-translucent) !default;
+$dropdown-border-radius:            var(--border-radius) !default;
+$dropdown-border-width:             var(--border-width) !default;
+$dropdown-divider-bg:               $dropdown-border-color !default;
+$dropdown-divider-margin-y:         $spacer * .5 !default;
+$dropdown-box-shadow:               var(--box-shadow) !default;
+
+$dropdown-link-color:               var(--body-color) !default;
+$dropdown-link-hover-color:         $dropdown-link-color !default;
+$dropdown-link-hover-bg:            var(--tertiary-bg) !default;
+
+$dropdown-link-disabled-color:      var(--tertiary-color) !default;
+
+$dropdown-item-padding-y:           $spacer !default;
+$dropdown-item-padding-x:           $spacer * 4 !default;
+// end dropdown
+// start navbar
+$nav-link-padding-y:                .5rem !default;
+$nav-link-padding-x:                1rem !default;
+$navbar-padding-y:                  $spacer * .5 !default;
+$navbar-padding-x:                  null !default;
+$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-brand-padding-y:            1rem !default;
+$navbar-brand-margin-end:           1rem !default;
+// end navbar
+// start badge
+$badge-font-size:                   .75em !default;
+$badge-font-weight:                 $font-weight-bold !default;
+$badge-color:                       $white !default;
+$badge-padding-y:                   .35em !default;
+$badge-padding-x:                   .65em !default;
+$badge-border-radius:               var(--border-radius) !default;
+// end badge
+// start modal
+$modal-inner-padding:               $spacer !default;
+
+$modal-footer-margin-between:       .5rem !default;
+
+$modal-dialog-margin:               .5rem !default;
+$modal-dialog-margin-y-sm-up:       1.75rem !default;
+
+$modal-title-line-height:           $line-height-base !default;
+
+$modal-content-color:               var(--body-color) !default;
+$modal-content-bg:                  var(--body-bg) !default;
+$modal-content-border-color:        var(--border-color-translucent) !default;
+$modal-content-border-width:        var(--border-width) !default;
+$modal-content-border-radius:       var(--border-radius-lg) !default;
+$modal-content-box-shadow-xs:       var(--box-shadow-sm) !default;
+$modal-content-box-shadow-sm-up:    var(--box-shadow) !default;
+
+$modal-backdrop-bg:                 $black !default;
+$modal-backdrop-opacity:            .5 !default;
+
+$modal-header-border-color:         var(--border-color) !default;
+$modal-header-border-width:         $modal-content-border-width !default;
+$modal-header-padding-y:            $modal-inner-padding !default;
+$modal-header-padding-x:            $modal-inner-padding !default;
+$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+
+$modal-footer-bg:                   null !default;
+$modal-footer-border-color:         $modal-header-border-color !default;
+$modal-footer-border-width:         $modal-header-border-width !default;
+
+$modal-sm:                          300px !default;
+$modal-md:                          500px !default;
+$modal-lg:                          800px !default;
+$modal-xl:                          1140px !default;
+
+$modal-fade-transform:              translate(0, -50px) !default;
+$modal-show-transform:              translateY(-50%) !default;
+$modal-transition:                  transform .3s ease-out !default;
+$modal-scale-transform:             scale(1.02) !default;
+// end modal

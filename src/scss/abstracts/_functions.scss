@@ -1,0 +1,30 @@
+@use './variables' as *;
+@use  'sass:list';
+@use 'sass:color';
+@use 'sass:map';
+@function get-display-properties($display-config: map.get($display-config, 'properties'), $display-values)
+{
+    $display-properties: ();
+    @for $i from 1 through list.length($display-config) {
+        $key: list.nth($display-config, $i); // Lấy key từ $display-config-list
+        $value: list.nth($display-values, $i);     // Lấy value tương ứng từ $display-1-xs
+        $display-properties: list.append($display-properties, ($key $value)); // Thêm cặp key-value vào map
+    }
+    @return $display-properties;
+}   
+
+@function tint-color($color, $weight) {
+    @return color.mix(white, $color, $weight);
+  }
+  
+ // Shade a color: mix a color with black
+@function shade-color($color, $weight) {
+    @return color.mix(black, $color, $weight);
+  }
+  
+  // Shade the color if the weight is positive, else tint it
+@function shift-color($color, $weight) {
+    @return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight));
+  }
+
+

@@ -1,0 +1,110 @@
+
+.owl-carousel{
+    --dot-diameter: 10px;
+    --dot-gap: 4px;
+    --dot-bg: var(--black);
+    --nav-diameter: 48px;
+    --nav-bg: var(--neutral-gray-6);
+    --nav-border-width: 1px;
+    --nav-border-color: var(--nav-bg);
+    
+    .owl-dots{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease 0.2s;
+        > button.owl-dot{
+            background-color: var(--dot-bg);
+            opacity: 50%;
+            border-radius: 50%;
+            width: var(--dot-diameter);
+            height: var(--dot-diameter);
+            margin: 0 var(--dot-gap);
+            &.active {
+                opacity: 100%;
+            }
+        }
+    }
+    .owl-nav{
+        button.owl-prev, button.owl-next{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1/1;
+            width: var(--nav-diameter);
+            height: var(--nav-diameter);
+            background-color: var(--nav-bg);
+            border: var(--nav-border-width) solid var(--nav-border-color);
+            border-radius: 50%;
+            &.disabled{
+                opacity: 20%;
+            }
+        }
+    }
+    &.propose-carousel {
+        .owl-dots{
+            margin-top: 16px;
+          }
+    }
+    // 
+    &.hot-jobs-carousel{
+        .owl-nav{
+            .owl-prev, .owl-next{
+                opacity: 80%;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1.8rem;
+                color: #fff;
+                position: absolute;
+            }
+            .owl-prev{
+                left: 5%;
+            }
+            .owl-next{
+                right: 5%;
+            }
+        }
+    }
+    
+}
+
+
+#blog-custom-owl-nav{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    button.owl-prev, button.owl-next{
+        width: 1.9rem;
+        height: 1.9rem;
+        aspect-ratio: 1/1;
+        background-color: transparent;
+        border: 2px solid var(--neutral-gray-6);
+        border-radius: 50%;
+        font-size: 1.2rem;
+        padding: 0;
+        color: var(--neutral-gray-6);
+        &.disabled{
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+    }
+    #blog-custom-owl-dots{
+        display: flex;
+        align-items: center;
+        button.owl-dot{
+            background-color: var(--primary);
+            opacity: 50%;
+            border: none;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            margin: 0 4px;
+            padding: 0;
+            &.active {
+                opacity: 100%;
+                border-radius: 8px;
+                width: 16px;
+            }
+        }
+    }
+}
