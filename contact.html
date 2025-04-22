@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+    </style>
     <title>Contact</title>
 </head>
 <body>
@@ -12,22 +15,109 @@
         <nav class="nav bg-dark position-sticky">
             <div class="container d-flex flex-column flex-md-row justify-between items-md-center">
                 <div class="d-flex justify-between items-center">
-                    <a href="index.html" class = "text-decoration-none"><h2 class = "py-2 text-white weight-3">FOOTBALL BOOTS</h2></a>
+                    <a href="index.html" class = "text-decoration-none d-flex items-center"><img width="60" src = "src/assets/images/img_brand.png"/><h3 class = "py-2 text-white weight-3">FOOTBALL BOOTS</h3></a>
                     <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
                         <i class="fa-solid fa-bars text-white"></i>
                     </div>
                 </div>
                 <ul class="text-white d-md-flex overflow-hidden collasped nav-menu">
-                    <li><a href="index.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Home</a></li>
-                    <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Products</a></li>
-                    <li><a href="contact.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Contact</a></li>
-                    <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">About</a></li>
-                    <li><a href="career.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Careers</a></li>
+                    <li><a href="index.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Trang chủ</a></li>
+                    <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
+                    <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
+                    <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ hàng</a></li>
+                    <li><a href="blog.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tin tức</a></li>
+                    <li><a href="career.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Liên hệ</a></li>
                     <li><a href="faq.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">FAQ</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <section class="py-5">
+        <div class="container px-4">
+            <div class="bg-light rounded p-4 p-md-8">
+                <div class="text-center mb-5 d-flex flex-column align-center">
+                    <div class="d-flex justify-center"><div class="bg-dark text-white d-flex flex-center icon-div"><i class="fa-solid fa-envelope"></i></div></div>
+                    <h1 class="weight-3">Liên hệ với chúng tôi</h1>
+                    <p class="h3 text-secondary">Hãy cùng nhau hợp tác!</p>
+                </div>
+                <div class="row justify-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <form class="d-flex form flex-column">
+                            <input class="form-control px-3 py-2 mb-3" type="text" id="name" name="name" placeholder="Họ và tên">
+                            <input class="form-control px-3 py-2 mb-3" type="email" id="email" name="email" placeholder="Địa chỉ email">
+                            <input class="form-control px-3 py-2 mb-3" type="tel" id="phone" name="phone" placeholder="Số điện thoại">
+                            <textarea class="form-control px-3 py-2 mb-3 w-100" name="message" id="message" placeholder="Lời nhắn"></textarea>
+                            <button class="btn bg-dark text-white p-3 h3">Gửi tin nhắn</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-light">
+        <div class="container px-4">
+            <div class="row gx-xxl-10 gx-md-3 gx-lg-6 gx-xl-7">
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 h-md-100 bg-white rounded text-center">
+                        <div class="bg-dark d-inline-flex flex-center text-white rounded mb-3 icon-div">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h3 class="weight-3">Địa chỉ</h3>
+                        <p class="text-secondary">123 Đường ABC, Quận XYZ<br>Thành phố Hồ Chí Minh</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 h-md-100 bg-white rounded text-center">
+                        <div class="bg-dark d-inline-flex flex-center text-white rounded mb-3 icon-div">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 class="weight-3">Điện thoại</h3>
+                        <p class="text-secondary">+84 123 456 789<br>+84 987 654 321</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 h-md-100 bg-white rounded text-center">
+                        <div class="bg-dark d-inline-flex flex-center text-white rounded mb-3 icon-div">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h3 class="weight-3">Email</h3>
+                        <p class="text-secondary">info@footballboots.com</p>
+                        <p class="text-secondary">support@footballboots.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container px-4">
+            <div class="text-center mb-4">
+                <h2 class="weight-3">Vị trí cửa hàng</h2>
+                <p class="text-secondary">Tìm cửa hàng Football Boots gần bạn nhất</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501725.3982652367!2d106.4150733991709!3d10.755342487500262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2zSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1660123456789!5m2!1svi!2s" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer class="footer bg-dark py-4">
+        <div class="container px-4">
+            <div class="d-flex flex-column flex-sm-row justify-between items-center">
+                <span class="text-white h4 mb-3 mb-sm-0">
+                    © 2023 Football Boots. All rights reserved.
+                </span>
+                <div class="privacy-terms-wrapper">
+                    <a class="text-white h4 text-decoration-none" href="#">Chính sách</a>
+                    <span class="text-white mx-2">•</span>
+                    <a class="text-white h4 text-decoration-none" href="#">Điều khoản</a>
+                    <span class="text-white mx-2">•</span>
+                    <a class="text-white h4 text-decoration-none" href="contact.html">Liên hệ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="src/assets/js/main.js"></script>
 </body>
 </html>

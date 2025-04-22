@@ -5,29 +5,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>About</title>
+    <style>
+        .card{
+
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.5rem;
+            background-color: rgba(33, 37, 41, 0.2);
+            bottom: 0.25rem;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .section-sub-title-with-icon {
+            display: inline-flex;
+            align-items: center;
+            color: #212529;
+        }
+        
+        .section-sub-title-with-icon i {
+            color: #fff;
+            background-color: #212529;
+            padding: 0.75rem;
+            margin-right: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+    <title>Giới thiệu</title>
 </head>
 <body>
     <header>
         <nav class="nav bg-dark position-sticky">
             <div class="container d-flex flex-column flex-md-row justify-between items-md-center">
                 <div class="d-flex justify-between items-center">
-                    <a href="index.html" class = "text-decoration-none"><h2 class = "py-2 text-white weight-3">FOOTBALL BOOTS</h2></a>
+                    <a href="index.html" class = "text-decoration-none d-flex items-center"><img width="60" src = "src/assets/images/img_brand.png"/><h3 class = "py-2 text-white weight-3">FOOTBALL BOOTS</h3></a>
                     <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
                         <i class="fa-solid fa-bars text-white"></i>
                     </div>
                 </div>
                 <ul class="text-white d-md-flex overflow-hidden collasped nav-menu">
-                    <li><a href="index.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Home</a></li>
-                    <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Products</a></li>
-                    <li><a href="contact.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Contact</a></li>
-                    <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">About</a></li>
-                    <li><a href="career.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Careers</a></li>
+                    <li><a href="index.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Trang chủ</a></li>
+                    <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
+                    <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
+                    <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ hàng</a></li>
+                    <li><a href="blog.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tin tức</a></li>
+                    <li><a href="career.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Liên hệ</a></li>
                     <li><a href="faq.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">FAQ</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <section class="about-section bg-light py-5">
+        <div class="container px-4 py-5">
+            <div class="row justify-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <h2 class="section-title text-center mb-5">
+                        <span class="h1 weight-3">Giới thiệu</span>
+                    </h2>
+                    
+                    <div class="bg-white shadow-sm bg-white border-0 rounded-3 mb-5">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="text-center mb-5">
+                                <div class="feature bg-dark text-white rounded-3 mb-3 d-inline-block p-3">
+                                    <i class="fa-solid fa-store"></i>
+                                </div>
+                                <h2 class="weight-3">Về Football Boots</h2>
+                                <p class="h3 text-secondary">Đối tác tin cậy của bạn từ năm 2010</p>
+                            </div>
+                            <p class="h4 mb-4 text-secondary">Football Boots tự hào là địa chỉ hàng đầu cung cấp giày bóng đá chính hãng tại Việt Nam. Chúng tôi mang đến cho khách hàng những sản phẩm chất lượng cao từ các thương hiệu nổi tiếng thế giới như Nike, Adidas, Puma và nhiều hãng khác.</p>
+                            
+                            <p class="h4 mb-5 text-secondary">Với hơn 13 năm kinh nghiệm trong ngành, chúng tôi cam kết mang đến sự hài lòng cho mọi khách hàng bằng dịch vụ chu đáo và sản phẩm chính hãng, đảm bảo chất lượng.</p>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm bg-white border-0 rounded-3 mb-5">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="mb-5">
+                                <div class="mb-4 section-sub-title-with-icon">
+                                    <i class="fa-solid fa-trophy"></i>
+                                    <h2 class="weight-3 mb-0">Tầm nhìn & Sứ mệnh</h2>
+                                </div>
+                                <p class="h4 text-secondary mb-4">Chúng tôi không chỉ đơn thuần là nơi bán giày, mà còn là điểm đến cho những người yêu thích bóng đá mong muốn nâng cao trải nghiệm thi đấu của mình.</p>
+                                <div class="row row-cols-1 row-cols-md-2 mb-4 gx-5">
+                                    <div class="col mb-4">
+                                        <div class="d-flex flex-column bg-light rounded-3 p-4 h-100 shadow-sm">
+                                            <h4 class="weight-3 mb-3">Tầm nhìn</h4>
+                                            <p class="h4 text-secondary mb-0">Trở thành nhà cung cấp giày bóng đá hàng đầu Việt Nam, mang đến cho người chơi những sản phẩm chất lượng nhất để chinh phục mọi sân cỏ.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col mb-4">
+                                        <div class="d-flex flex-column bg-light rounded-3 p-4 h-100 shadow-sm">
+                                            <h4 class="weight-3 mb-3">Sứ mệnh</h4>
+                                            <p class="h4 text-secondary mb-0">Cung cấp những sản phẩm chính hãng chất lượng cao, đồng thời tư vấn chuyên nghiệp để mỗi khách hàng tìm được đôi giày phù hợp nhất.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm border-0 bg-white rounded-3 mb-5">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="mb-4 section-sub-title-with-icon">
+                                <i class="fa-solid fa-users"></i>
+                                <h2 class="weight-3 mb-0 h2">Đội ngũ của chúng tôi</h2>
+                            </div>
+                            <p class="h4 text-secondary mb-4">Football Boots tự hào với đội ngũ nhân viên nhiệt tình, am hiểu sâu sắc về giày bóng đá và luôn sẵn sàng hỗ trợ quý khách.</p>
+                            
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+                                <div class="col">
+                                    <div class="d-flex flex-column items-center border-0 h-100">
+                                        <img src="src/assets/images/img_avatar_1.jpg" style="aspect-ratio: 1/1;width: 50%;" class="shadow-sm mb-5 rounded-circle rounded-3" alt="Nhân viên">
+                                        <div class="card-body px-0">
+                                            <h5 class="h3 mb-2 weight-3 text-center">Nguyễn Văn A</h5>
+                                            <p class="card-text text-secondary">Giám đốc điều hành</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex flex-column items-center border-0 h-100">
+                                        <img src="src/assets/images/img_avatar_2.png" style="aspect-ratio: 1/1;width: 50%;" class="shadow-sm mb-5 rounded-circle rounded-3" alt="Nhân viên">
+                                        <div class="card-body px-0">
+                                            <h5 class="h3 mb-2 weight-3 text-center">Trần Thị B</h5>
+                                            <p class="card-text text-secondary">Quản lý cửa hàng</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex flex-column items-center border-0 h-100">
+                                        <img src="src/assets/images/img_avatar_3.jpg" style="aspect-ratio: 1/1;width: 50%;" class="shadow-sm mb-5 rounded-circle rounded-3" alt="Nhân viên">
+                                        <div class="card-body px-0">
+                                            <h5 class="h3 mb-2 weight-3 text-center">Lê Văn C</h5>
+                                            <p class="card-text text-secondary">Chuyên gia tư vấn</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm bg-white border-0 rounded-3">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="mb-4 section-sub-title-with-icon">
+                                <i class="fa-solid fa-star"></i>
+                                <h2 class="weight-3 mb-0 h2">Giá trị cốt lõi</h2>
+                            </div>
+                            
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                <div class="col">
+                                    <div class="d-flex flex-column bg-light rounded-3 p-4 h-100 shadow-sm">
+                                        <div class="d-flex justify-center mb-3">
+                                            <div class="bg-dark text-white icon-div d-inline-flex flex-center rounded-3">
+                                                <i class="fa-solid fa-certificate"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-center weight-3 mb-3">Chính hãng</h4>
+                                        <p class="text-secondary text-center mb-0">100% sản phẩm được nhập khẩu chính hãng, có đầy đủ giấy tờ và tem nhãn.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="d-flex flex-column bg-light rounded-3 p-4 h-100 shadow-sm">
+                                        <div class="d-flex justify-center mb-3">
+                                            <div class="bg-dark text-white icon-div d-inline-flex flex-center rounded-3">
+                                                <i class="fa-solid fa-handshake"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-center weight-3 mb-3">Tư vấn tận tâm</h4>
+                                        <p class="text-secondary text-center mb-0">Đội ngũ nhân viên chuyên nghiệp, am hiểu sản phẩm và nhu cầu khách hàng.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="d-flex flex-column bg-light rounded-3 p-4 h-100 shadow-sm">
+                                        <div class="d-flex justify-center mb-3">
+                                            <div class="bg-dark text-white icon-div d-inline-flex flex-center rounded-3">
+                                                <i class="fa-solid fa-truck-fast"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-center weight-3 mb-3">Giao hàng nhanh</h4>
+                                        <p class="text-secondary text-center mb-0">Giao hàng toàn quốc, đảm bảo tốc độ và an toàn cho sản phẩm.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="d-flex flex-column bg-light rounded-3 p-4 h-100 shadow-sm">
+                                        <div class="d-flex justify-center mb-3">
+                                            <div class="bg-dark text-white icon-div d-inline-flex flex-center rounded-3">
+                                                <i class="fa-solid fa-tags"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-center weight-3 mb-3">Giá cạnh tranh</h4>
+                                        <p class="text-secondary text-center mb-0">Cam kết giá tốt nhất thị trường cho sản phẩm chính hãng.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="d-flex flex-column bg-light rounded-3 p-4 h-100 shadow-sm">
+                                        <div class="d-flex justify-center mb-3">
+                                            <div class="bg-dark text-white icon-div d-inline-flex flex-center rounded-3">
+                                                <i class="fa-solid fa-arrows-rotate"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-center weight-3 mb-3">Đổi trả linh hoạt</h4>
+                                        <p class="text-secondary text-center mb-0">Chính sách đổi trả trong 30 ngày nếu sản phẩm có lỗi từ nhà sản xuất.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col">
+                                    <div class="d-flex flex-column bg-light rounded-3 p-4 h-100 shadow-sm">
+                                        <div class="d-flex justify-center mb-3">
+                                            <div class="bg-dark text-white icon-div d-inline-flex flex-center rounded-3">
+                                                <i class="fa-solid fa-headset"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-center weight-3 mb-3">Hỗ trợ 24/7</h4>
+                                        <p class="text-secondary text-center mb-0">Luôn sẵn sàng hỗ trợ khách hàng mọi lúc, mọi nơi qua đa kênh.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer bg-dark py-4">
+        <div class="container px-4">
+            <div class="d-flex flex-column flex-sm-row justify-between items-center">
+                <span class="text-white h4 mb-3 mb-sm-0">
+                    © 2023 Football Boots. All rights reserved.
+                </span>
+                <div class="privacy-terms-wrapper">
+                    <a class="text-white h4 text-decoration-none" href="#">Chính sách</a>
+                    <span class="text-white mx-2">•</span>
+                    <a class="text-white h4 text-decoration-none" href="#">Điều khoản</a>
+                    <span class="text-white mx-2">•</span>
+                    <a class="text-white h4 text-decoration-none" href="contact.html">Liên hệ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="src/assets/js/main.js"></script>
 </body>
 </html>

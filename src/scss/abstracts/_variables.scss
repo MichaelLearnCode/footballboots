@@ -45,6 +45,7 @@ $color-themes: (
     'success': $successes
 );
 
+$bg-secondary: #606164;
 $bg-dark: #222831;
 $bg-medium: #393E46;
 $bg-bright: #D2D2D2;
@@ -52,10 +53,16 @@ $bg-light: #EFEFEF;
 $bg-white: #fff;
 $bg: (
     "dark": $bg-dark,
+    "secondary": $bg-secondary,
     "medium": $bg-medium,
     "bright": $bg-bright,
     "light": $bg-light,
     "white": $bg-white,
+    "success": $success-1,
+    "warning": $warning-1,
+    "infor": $infor-1,
+    "error": $error-1,
+    "primary": $infor-1,
 );
 
 
