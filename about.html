@@ -9,28 +9,6 @@
         .card{
 
         }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-        
-        .section-title span {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .section-title:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 0.5rem;
-            background-color: rgba(33, 37, 41, 0.2);
-            bottom: 0.25rem;
-            left: 0;
-            z-index: 0;
-        }
         
         .section-sub-title-with-icon {
             display: inline-flex;
@@ -58,27 +36,37 @@
                         <i class="fa-solid fa-bars text-white"></i>
                     </div>
                 </div>
-                <ul class="text-white d-md-flex overflow-hidden collasped nav-menu">
-                    <li><a href="index.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Trang chủ</a></li>
-                    <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
+                <ul class="text-white d-md-flex collasped nav-menu">
+                    <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3 text-primary">Giới thiệu</a></li>
                     <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
                     <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ hàng</a></li>
-                    <li><a href="blog.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tin tức</a></li>
                     <li><a href="career.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
-                    <li><a href="contact.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Liên hệ</a></li>
-                    <li><a href="faq.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">FAQ</a></li>
+                    <li class="dropdown js-dropdown-nav-item">
+                        <span class="cursor-pointer text-white d-block px-md-3 nav-item py-2 h3">Khác<i class="fa-solid fa-chevron-down ms-2" style = "font-size: 0.8rem;"></i></span>
+                        <ul class="dropdown-menu position-static position-md-absolute js-dropdown-content rounded-0 border-0 shadow-sm">
+                            <li><a href="blog.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Tin tức</a></li>
+                            <li><a href="contact.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Liên hệ</a></li>
+                            <li><a href="faq.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">FAQ</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
+    <section>
+        <div class="section-banner">
+            <img src="src/assets/images/img_banner_about.avif" class="w-100 banner-img" alt="">
+            <div class="banner-overlay"></div>
+            <div class="banner-content d-flex flex-column justify-center align-center">
+                <h1 class="text-white mb-4 banner-header weight-3 text-center">Giới thiệu về chúng tôi</h1>
+                <p class="text-medium h3 banner-description text-center px-14">Khám phá hành trình và sứ mệnh của Football Boots - nơi mang đến những đôi giày bóng đá chính hãng và chất lượng nhất.</p>
+            </div>
+        </div>
+    </section>
     <section class="about-section bg-light py-5">
         <div class="container px-4 py-5">
             <div class="row justify-center">
                 <div class="col-lg-11 col-xl-9 col-xxl-8">
-                    <h2 class="section-title text-center mb-5">
-                        <span class="h1 weight-3">Giới thiệu</span>
-                    </h2>
-                    
                     <div class="bg-white shadow-sm bg-white border-0 rounded-3 mb-5">
                         <div class="card-body p-4 p-md-5">
                             <div class="text-center mb-5">
@@ -262,6 +250,6 @@
             </div>
         </div>
     </footer>
-    <script src="src/assets/js/main.js"></script>
+    <script src="src/assets/js/main.js" type="module"></script>
 </body>
 </html>

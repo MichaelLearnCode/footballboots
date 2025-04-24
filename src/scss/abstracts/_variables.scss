@@ -21,6 +21,8 @@ $warnings: (
     3: $warning-3
 );
 
+$primary: #31cf7f;
+
 $infor-1: #3366FF;
 $infor-2: #2E9DFF;
 $infor-3: #E9F6FE;
@@ -47,7 +49,7 @@ $color-themes: (
 
 $bg-secondary: #606164;
 $bg-dark: #222831;
-$bg-medium: #393E46;
+$bg-medium: #9d9e9f;
 $bg-bright: #D2D2D2;
 $bg-light: #EFEFEF;
 $bg-white: #fff;
@@ -62,7 +64,7 @@ $bg: (
     "warning": $warning-1,
     "infor": $infor-1,
     "error": $error-1,
-    "primary": $infor-1,
+    "primary": $primary,
 );
 
 

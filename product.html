@@ -5,44 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>FAQ</title>
+    <style>
+        .product-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+        }
+        
+        .btn-quantity {
+            width: 30px;
+            height: 30px;
+            background-color: var(--black);
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+    </style>
+    <title>Chi tiết sản phẩm</title>
 </head>
 <body>
     <header>
         <nav class="nav bg-dark position-sticky">
             <div class="container d-flex flex-column flex-md-row justify-between items-md-center">
                 <div class="d-flex justify-between items-center">
-                    <a href="index.html" class = "text-decoration-none d-flex items-center"><img width="60" src = "src/assets/images/img_brand.png"/><h3 class = "py-2 text-white weight-3">FOOTBALL BOOTS</h3></a>
+                    <a href="index.html" class="text-decoration-none d-flex items-center"><img width="60" src="src/assets/images/img_brand.png"/><h3 class="py-2 text-white weight-3">FOOTBALL BOOTS</h3></a>
                     <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
                         <i class="fa-solid fa-bars text-white"></i>
                     </div>
                 </div>
                 <ul class="text-white d-md-flex collasped nav-menu">
                     <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
-                    <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
+                    <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3 text-primary">Sản phẩm</a></li>
                     <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ hàng</a></li>
                     <li><a href="career.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
                     <li class="dropdown js-dropdown-nav-item">
-                        <span class="cursor-pointer text-white d-block px-md-3 nav-item py-2 h3">Khác<i class="fa-solid fa-chevron-down ms-2" style = "font-size: 0.8rem;"></i></span>
+                        <span class="cursor-pointer text-white d-block px-md-3 nav-item py-2 h3">Khác<i class="fa-solid fa-chevron-down ms-2" style="font-size: 0.8rem;"></i></span>
                         <ul class="dropdown-menu position-static position-md-absolute js-dropdown-content rounded-0 border-0 shadow-sm">
                             <li><a href="blog.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Tin tức</a></li>
                             <li><a href="contact.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Liên hệ</a></li>
-                            <li><a href="faq.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3 text-primary">FAQ</a></li>
+                            <li><a href="faq.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">FAQ</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <section>
-        <div class="section-banner">
-            <img src="src/assets/images/img_banner_qna.avif" class="w-100 banner-img" alt="">
-            <div class="banner-overlay"></div>
-            <div class="banner-content d-flex flex-column justify-center align-center">
-                <h1 class="mb-4 text-white banner-header weight-3 text-center">Câu hỏi thường gặp</h1>
-                <p class="text-medium h3 banner-description text-center px-14">Giải đáp mọi thắc mắc về sản phẩm và dịch vụ của chúng tôi để bạn yên tâm mua sắm.</p>
+    
+    <section class="product-section py-10 mb-14">
+        <div class="container px-4">
+            <div class="product-detail-wrapper">
+                <!-- Product content will be rendered here -->
+            </div>
         </div>
     </section>
+
     <footer class="footer bg-dark py-4">
         <div class="container px-4">
             <div class="d-flex flex-column flex-sm-row justify-between items-center">
@@ -60,5 +85,6 @@
         </div>
     </footer>
     <script type="module" src="src/assets/js/main.js"></script>
+    <script type="module" src="src/assets/js/pages/prod.js"></script>
 </body>
 </html>

@@ -56,23 +56,19 @@
                         <i class="fa-solid fa-bars text-white"></i>
                     </div>
                 </div>
-                <ul class="text-white d-md-flex overflow-hidden collasped nav-menu">
-                    <li><a href="index.html"
-                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Trang chủ</a></li>
-                    <li><a href="about.html"
-                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
-                    <li><a href="products.html"
-                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
-                    <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ
-                            hàng</a></li>
-                    <li><a href="blog.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tin
-                            tức</a></li>
-                    <li><a href="career.html"
-                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
-                    <li><a href="contact.html"
-                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Liên hệ</a></li>
-                    <li><a href="faq.html"
-                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">FAQ</a></li>
+                <ul class="text-white d-md-flex collasped nav-menu">
+                    <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
+                    <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
+                    <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3 text-primary">Giỏ hàng</a></li>
+                    <li><a href="career.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
+                    <li class="dropdown js-dropdown-nav-item">
+                        <span class="cursor-pointer text-white d-block px-md-3 nav-item py-2 h3">Khác<i class="fa-solid fa-chevron-down ms-2" style="font-size: 0.8rem;"></i></span>
+                        <ul class="dropdown-menu position-static position-md-absolute js-dropdown-content rounded-0 border-0 shadow-sm">
+                            <li><a href="blog.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Tin tức</a></li>
+                            <li><a href="contact.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Liên hệ</a></li>
+                            <li><a href="faq.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">FAQ</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -121,8 +117,8 @@
             </div>
         </div>
     </footer>
-    <script src="src/assets/js/main.js"></script>
-    <script>
+    <script type="module" src="src/assets/js/main.js"></script>
+    <script type="module">
         // JavaScript để xử lý giỏ hàng (nếu cần)
         const cartData = [
             {
