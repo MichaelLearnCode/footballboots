@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div></td>
                 <td>${formattedPrice} VNĐ</td>
                 <td class="text-center">${quantity}</td>
-                <td class="text-center"><button class="btn bg-error px-5 py-2 text-white cursor-pointer remove-from-cart">Xóa</button></td>
+                <td class="text-center"><button class="btn bg-error px-md-5 py-2 text-white cursor-pointer remove-from-cart">Xóa</button></td>
             </tr>
         `;
         totalPrice += product.price * quantity;
