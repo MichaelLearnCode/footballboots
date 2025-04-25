@@ -1,13 +1,14 @@
 import { Api } from "../../../api/api.js";
+import { alert } from "../utils.js";
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
-    
+
     const productDetailWrapper = document.querySelector('.product-detail-wrapper');
-    
+
     const api = Api().init();
-    
+
     productDetailWrapper.innerHTML = `
         <div class="row g-0 g-md-2 g-lg-6 g-xl-8">
             <div class="col-12 col-md-5 mb-4 mb-md-0">
@@ -52,28 +53,56 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
         </div>
     `;
-    
+
     function formatPrice(price) {
         return new Intl.NumberFormat('vi-VN').format(price);
     }
-    
-    function addToCart(id, quantity) {
-        
+
+    async function addToCart(id, quantity, addToCartBtn) {
+        if (!localStorage.getItem('access_token')) {
+            window.location.href = '/login.html';
+        }
+        addToCartBtn.innerHTML = `<i class="fa-solid fa-spinner spinner fa-spin"></i>`;
+        addToCartBtn.setAttribute('disabled', true);
+        const users = await api.get('/users2', {
+            custom: (user) => user.access_token === localStorage.getItem('access_token')
+        });
+        const user = users[0];
+        if (user) {
+            const cart = user.cart || [];
+            const productIndex = cart.findIndex(item => item.product.id === id);
+            if (productIndex !== -1) {
+                cart[productIndex].quantity += quantity;
+                user.cart = cart;
+                await api.put(`/users2/${user.id}`, user);
+                addToCartBtn.innerHTML = `<i class="fa-solid fa-cart-plus me-2"></i>Thêm vào giỏ hàng`;
+                addToCartBtn.removeAttribute('disabled');
+                alert('Thêm vào giỏ hàng thành công');
+            } else {
+                const product = await api.get(`/products/${id}`);
+                cart.push({ product, quantity });
+                user.cart = cart;
+                await api.put(`/users2/${user.id}`, user);
+                addToCartBtn.innerHTML = `<i class="fa-solid fa-cart-plus me-2"></i>Thêm vào giỏ hàng`;
+                addToCartBtn.removeAttribute('disabled');
+                alert('Thêm vào giỏ hàng thành công');
+            }
+        }
     }
-    
+
     try {
         if (!productId) {
             throw new Error('Missing product ID');
         }
-        
+
         const product = await api.get(`/products/${productId}`);
-        
+
         if (!product) {
             throw new Error('Product not found');
         }
-        
+
         const originalPriceValue = Math.round(product.price * 1.37);
-        
+
         productDetailWrapper.innerHTML = `
             <div class="row g-0 g-md-2 g-lg-6 g-xl-8">
                 <div class="col-12 col-md-5 mb-4 mb-md-0">
@@ -120,34 +149,34 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             </div>
         `;
-        
+
         // Set page title
         document.title = product.name + ' - Football Boots';
-        
+
         // Add event listeners after rendering the HTML
         const quantityInput = document.getElementById('quantityInput');
         const decreaseQuantity = document.getElementById('decreaseQuantity');
         const increaseQuantity = document.getElementById('increaseQuantity');
         const addToCartBtn = document.getElementById('addToCartBtn');
-        
+
         decreaseQuantity.addEventListener('click', () => {
             if (parseInt(quantityInput.value) > 1) {
                 quantityInput.value = parseInt(quantityInput.value) - 1;
             }
         });
-        
+
         increaseQuantity.addEventListener('click', () => {
             quantityInput.value = parseInt(quantityInput.value) + 1;
         });
-        
+
         addToCartBtn.addEventListener('click', () => {
             const quantity = parseInt(quantityInput.value);
-            addToCart(productId, quantity);
+            addToCart(productId, quantity, addToCartBtn);
         });
-        
+
     } catch (error) {
         console.error('Failed to fetch product details:', error);
-        
+
         // Show error message
         productDetailWrapper.innerHTML = `
             <div class="text-center py-5">

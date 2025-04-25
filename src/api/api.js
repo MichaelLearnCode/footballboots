@@ -11,7 +11,7 @@ function Api(){
         baseUrl = url;
         baseHeaders = headers;
         return {
-            get, post, put, del
+            get,patch, post, put, del
         }
     }
     async function request(endpoint, method, bodyData, headers = {}){
@@ -59,6 +59,10 @@ function Api(){
 
     function del(endpoint, bodyData, headers){
         return request(endpoint, 'DELETE', bodyData, headers);
+    }
+
+    function patch(endpoint, bodyData, headers){
+        return request(endpoint, 'PATCH', bodyData, headers);
     }
     return {init};
 }

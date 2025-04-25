@@ -1,38 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .category-buttons {
+            margin-bottom: 2rem;
+        }
+
+        .category-btn {
+            margin: 0.25rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 10px;
+            background-color: transparent;
+            border: 1px solid #dee2e6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn.active,
+        .category-btn:hover {
+            background-color: #212529;
+            color: white;
+            border-color: #212529;
+        }
+        .accordion-content li{
+            padding-left: 10px;
+        }
+    </style>
     <title>FAQ</title>
 </head>
+
 <body>
-    <header>
-        <nav class="nav bg-dark position-sticky">
+    <header class="header-with-nav">
+        <nav class="nav bg-dark">
             <div class="container d-flex flex-column flex-md-row justify-between items-md-center">
                 <div class="d-flex justify-between items-center">
-                    <a href="index.html" class = "text-decoration-none d-flex items-center"><img width="60" src = "src/assets/images/img_brand.png"/><h3 class = "py-2 text-white weight-3">FOOTBALL BOOTS</h3></a>
-                    <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
-                        <i class="fa-solid fa-bars text-white"></i>
+                    <a href="index.html" class="text-decoration-none d-flex items-center"><img width="60"
+                            src="src/assets/images/img_brand.png" />
+                        <h3 class="py-2 text-white weight-3">FOOTBALL BOOTS</h3>
+                    </a>
+                    <div class="d-flex items-center">
+                        <div class="user-wrapper-mobile">
+                            <a href="login.html" class="login-btn d-md-none text-white me-3 text-decoration-none">Đăng
+                                nhập</a>
+                        </div>
+                        <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
+                            <i class="fa-solid fa-bars text-white"></i>
+                        </div>
                     </div>
                 </div>
                 <ul class="text-white d-md-flex collasped nav-menu">
-                    <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
-                    <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
-                    <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ hàng</a></li>
-                    <li><a href="career.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
+                    <li><a href="about.html"
+                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
+                    <li><a href="products.html"
+                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
+                    <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ
+                            hàng</a></li>
+                    <li><a href="career.html"
+                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
                     <li class="dropdown js-dropdown-nav-item">
-                        <span class="cursor-pointer text-white d-block px-md-3 nav-item py-2 h3">Khác<i class="fa-solid fa-chevron-down ms-2" style = "font-size: 0.8rem;"></i></span>
-                        <ul class="dropdown-menu position-static position-md-absolute js-dropdown-content rounded-0 border-0 shadow-sm">
-                            <li><a href="blog.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Tin tức</a></li>
-                            <li><a href="contact.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Liên hệ</a></li>
-                            <li><a href="faq.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3 text-primary">FAQ</a></li>
+                        <span class="cursor-pointer text-white d-block px-md-3 nav-item py-2 h3">Khác<i
+                                class="fa-solid fa-chevron-down ms-2" style="font-size: 0.8rem;"></i></span>
+                        <ul
+                            class="dropdown-menu position-static position-md-absolute js-dropdown-content rounded-0 border-0 shadow-sm">
+                            <li><a href="blog.html"
+                                    class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Tin
+                                    tức</a></li>
+                            <li><a href="contact.html"
+                                    class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Liên
+                                    hệ</a></li>
+                            <li><a href="faq.html"
+                                    class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3 text-primary">FAQ</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </nav>
+        <div class="sub-nav bg-white py-1 d-none d-md-block">
+            <div class="container d-flex items-center user-wrapper">
+                <a href="login.html"
+                    class="ms-auto login-btn d-none d-md-block text-black me-3 text-decoration-none">Đăng nhập</a>
+            </div>
+        </div>
     </header>
     <section>
         <div class="section-banner">
@@ -40,9 +95,255 @@
             <div class="banner-overlay"></div>
             <div class="banner-content d-flex flex-column justify-center align-center">
                 <h1 class="mb-4 text-white banner-header weight-3 text-center">Câu hỏi thường gặp</h1>
-                <p class="text-medium h3 banner-description text-center px-14">Giải đáp mọi thắc mắc về sản phẩm và dịch vụ của chúng tôi để bạn yên tâm mua sắm.</p>
+                <p class="text-medium h3 banner-description text-center px-14">Giải đáp mọi thắc mắc về sản phẩm và dịch
+                    vụ của chúng tôi để bạn yên tâm mua sắm.</p>
+            </div>
         </div>
     </section>
+
+    <section class="mt-5 mb-14">
+        <div class="container px-4">
+            <div class="text-center mb-5">
+                <h2 class="weight-3 mb-3">Câu Hỏi Thường Gặp</h2>
+                <p style = "font-size: 1rem;" class="weight-3 py-3 h4">Tìm câu trả lời nhanh chóng cho các thắc mắc của bạn</p>
+            </div>
+
+            <div class="category-buttons text-center">
+                <button class="category-btn active" data-category="all">Tất cả</button>
+                <button class="category-btn" data-category="product">Sản phẩm</button>
+                <button class="category-btn" data-category="order">Đơn hàng & Thanh toán</button>
+                <button class="category-btn" data-category="shipping">Vận chuyển</button>
+                <button class="category-btn" data-category="warranty">Bảo hành</button>
+            </div>
+
+            <div class="accordion">
+                <!-- Câu hỏi về sản phẩm -->
+                <div class="accordion-item" data-category="product">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Làm thế nào để chọn size giày phù hợp?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Để chọn size giày phù hợp, bạn nên đo chính xác chiều dài bàn chân của
+                            mình và tham khảo bảng size của từng thương hiệu. Chúng tôi khuyến nghị chọn size lớn hơn
+                            0.5-1cm so với chiều dài bàn chân thực tế. Mỗi thương hiệu có form giày khác nhau, vì vậy
+                            nếu bạn cần tư vấn cụ thể, hãy liên hệ với nhân viên tư vấn của chúng tôi.</p>
+                        <p style = "font-size: 1rem;" class="weight-3 py-3 mt-3">Bảng size của các thương hiệu phổ biến:</p>
+                        <ul class="text-secondary mb-0">
+                            <li>Nike: Size EU thường tương đương với size Việt Nam</li>
+                            <li>Adidas: Size EU thường nhỏ hơn 0.5 size so với Nike</li>
+                            <li>Puma: Size EU thường tương đương với size Nike</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-category="product">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Làm thế nào để phân biệt giày chính hãng và giày fake?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Để phân biệt giày chính hãng và giày fake, bạn có thể chú ý đến những
+                            điểm sau:</p>
+                        <ul class="text-secondary mb-0">
+                            <li>Kiểm tra logo, đường may và chi tiết hoàn thiện: Giày chính hãng luôn có logo rõ nét,
+                                đường may tinh tế và đều đặn.</li>
+                            <li>Tem mác và mã sản phẩm: Kiểm tra mã sản phẩm trên tem với mã trên hộp và đối chiếu trên
+                                website chính thức.</li>
+                            <li>Chất liệu: Giày chính hãng thường có chất liệu cao cấp, cảm giác chắc chắn và linh hoạt.
+                            </li>
+                            <li>Giá thành: Nếu giá quá rẻ so với thị trường, đó có thể là dấu hiệu của hàng giả.</li>
+                            <li>Mua từ đại lý ủy quyền: Football Boots là đại lý chính hãng được ủy quyền bởi các thương
+                                hiệu lớn, đảm bảo sản phẩm 100% chính hãng.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-category="product">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Giày đá bóng sân cỏ nhân tạo và sân cỏ tự nhiên có gì khác nhau?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Giày dành cho sân cỏ nhân tạo (TF - Turf) và sân cỏ tự nhiên (FG -
+                            Firm Ground) có những khác biệt cơ bản:</p>
+                        <ul class="text-secondary mb-0">
+                            <li><strong>Đế giày TF:</strong> Có nhiều đinh nhỏ, thường làm từ cao su, phù hợp với mặt
+                                sân cỏ nhân tạo ngắn hoặc sân futsal, giúp bám sân tốt mà không gây hư hại mặt sân.</li>
+                            <li><strong>Đế giày FG:</strong> Có các đinh dài hơn, thường làm từ nhựa cứng, thiết kế để
+                                cắm sâu vào mặt cỏ tự nhiên, tạo độ bám tốt trên sân cỏ mềm.</li>
+                            <li><strong>Phạm vi sử dụng:</strong> Giày TF linh hoạt hơn, có thể sử dụng trên nhiều bề
+                                mặt khác nhau, trong khi giày FG chỉ phù hợp với sân cỏ tự nhiên hoặc sân cỏ nhân tạo
+                                dài.</li>
+                            <li><strong>Độ bền:</strong> Đinh TF thường bền hơn vì làm bằng cao su, trong khi đinh FG dễ
+                                mòn nếu sử dụng trên mặt sân cứng.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Câu hỏi về đơn hàng & thanh toán -->
+                <div class="accordion-item" data-category="order">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Các phương thức thanh toán được hỗ trợ?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Football Boots hỗ trợ đa dạng phương thức thanh toán:</p>
+                        <ul class="text-secondary mb-0">
+                            <li>Thanh toán khi nhận hàng (COD)</li>
+                            <li>Chuyển khoản ngân hàng</li>
+                            <li>Thanh toán qua ví điện tử: MoMo, ZaloPay, VNPay</li>
+                            <li>Thanh toán qua thẻ tín dụng/ghi nợ: Visa, MasterCard, JCB</li>
+                            <li>Trả góp 0% qua thẻ tín dụng (đối với đơn hàng từ 3 triệu)</li>
+                        </ul>
+                        <p style = "font-size: 1rem;" class="weight-3 py-3 mt-3">Với mọi phương thức thanh toán, chúng tôi đều cung cấp hóa đơn
+                            điện tử gửi qua email của bạn.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-category="order">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Làm thế nào để theo dõi đơn hàng?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Để theo dõi đơn hàng, bạn có thể thực hiện theo các cách sau:</p>
+                        <ul class="text-secondary mb-0">
+                            <li>Đăng nhập vào tài khoản của bạn trên website Football Boots và truy cập mục "Đơn hàng
+                                của tôi"</li>
+                            <li>Sử dụng mã vận đơn được gửi qua email hoặc tin nhắn SMS sau khi đơn hàng được xác nhận
+                            </li>
+                            <li>Liên hệ trực tiếp với bộ phận CSKH qua hotline: 1900.1234 (8:00 - 22:00 hàng ngày)</li>
+                            <li>Gửi yêu cầu qua email: care@footballboots.com</li>
+                        </ul>
+                        <p style = "font-size: 1rem;" class="weight-3 py-3 mt-3">Chúng tôi cập nhật trạng thái đơn hàng theo thời gian thực để bạn
+                            có thể theo dõi quá trình vận chuyển.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-category="order">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Tôi có thể hủy đơn hàng sau khi đã đặt không?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Bạn có thể hủy đơn hàng với các điều kiện sau:</p>
+                        <ul class="text-secondary mb-0">
+                            <li>Đơn hàng chưa được xác nhận: Hủy trực tiếp trên website hoặc liên hệ CSKH</li>
+                            <li>Đơn hàng đã xác nhận nhưng chưa giao cho đơn vị vận chuyển: Liên hệ CSKH để hủy</li>
+                            <li>Đơn hàng đã giao cho đơn vị vận chuyển: Có thể phát sinh phí hủy đơn</li>
+                            <li>Đơn hàng đã giao đến nơi: Không thể hủy đơn, bạn có thể sử dụng chính sách đổi/trả</li>
+                        </ul>
+                        <p style = "font-size: 1rem;" class="weight-3 py-3 mt-3">Đối với đơn hàng đã thanh toán trước, chúng tôi sẽ hoàn tiền
+                            trong vòng 7-14 ngày làm việc sau khi xác nhận hủy đơn.</p>
+                    </div>
+                </div>
+
+                <!-- Câu hỏi về vận chuyển -->
+                <div class="accordion-item" data-category="shipping">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Thời gian giao hàng là bao lâu?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Thời gian giao hàng phụ thuộc vào khu vực:</p>
+                        <ul class="text-secondary mb-0">
+                            <li>Khu vực nội thành Hà Nội, TP. HCM: 1-2 ngày làm việc</li>
+                            <li>Khu vực các tỉnh thành khác: 3-5 ngày làm việc</li>
+                            <li>Khu vực đảo, vùng sâu vùng xa: 5-7 ngày làm việc</li>
+                        </ul>
+                        <p style = "font-size: 1rem;" class="weight-3 py-3 mt-3">Lưu ý: Thời gian giao hàng không tính ngày lễ, Tết và cuối tuần.
+                            Trong một số trường hợp đặc biệt (thiên tai, dịch bệnh), thời gian giao hàng có thể kéo dài
+                            hơn.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-category="shipping">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Chi phí vận chuyển là bao nhiêu?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Chi phí vận chuyển được tính như sau:</p>
+                        <ul class="text-secondary mb-0">
+                            <li>Đơn hàng từ 1.000.000đ trở lên: Miễn phí vận chuyển toàn quốc</li>
+                            <li>Đơn hàng dưới 1.000.000đ:
+                                <ul>
+                                    <li>Nội thành Hà Nội, TP. HCM: 30.000đ</li>
+                                    <li>Các tỉnh thành khác: 40.000đ</li>
+                                    <li>Vùng sâu vùng xa: 50.000-70.000đ (tùy khu vực)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p style = "font-size: 1rem;" class="weight-3 py-3 mt-3">Chúng tôi thường xuyên có các chương trình khuyến mãi miễn phí
+                            vận chuyển, hãy theo dõi website hoặc fanpage để không bỏ lỡ!</p>
+                    </div>
+                </div>
+
+                <!-- Câu hỏi về bảo hành -->
+                <div class="accordion-item" data-category="warranty">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Chính sách đổi trả sản phẩm như thế nào?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Football Boots có chính sách đổi trả linh hoạt:</p>
+                        <ul class="text-secondary mb-0">
+                            <li><strong>Đổi size/màu:</strong> Miễn phí trong vòng 7 ngày kể từ ngày nhận hàng, sản phẩm
+                                chưa qua sử dụng, còn nguyên tem mác</li>
+                            <li><strong>Trả hàng hoàn tiền:</strong> Áp dụng trong vòng 3 ngày kể từ ngày nhận hàng, với
+                                lý do sản phẩm lỗi hoặc không đúng mô tả</li>
+                            <li><strong>Lỗi từ nhà sản xuất:</strong> Đổi mới trong vòng 30 ngày kể từ ngày mua hàng
+                            </li>
+                            <li><strong>Trường hợp không áp dụng:</strong> Sản phẩm đã qua sử dụng, bị hư hỏng do người
+                                dùng, không còn nguyên tem mác</li>
+                        </ul>
+                        <p style = "font-size: 1rem;" class="weight-3 py-3 mt-3">Để đổi/trả sản phẩm, bạn vui lòng giữ lại hóa đơn, tem mác và
+                            đóng gói nguyên vẹn sản phẩm.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-category="warranty">
+                    <div class="accordion-header">
+                        <h3 class="h3 weight-3">Thời hạn bảo hành sản phẩm là bao lâu?</h3>
+                        <div class="accordion-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p style = "font-size: 1rem;" class="weight-3 py-3">Thời hạn bảo hành sản phẩm tại Football Boots:</p>
+                        <ul class="text-secondary mb-0">
+                            <li>Giày bóng đá: Bảo hành 3 tháng đối với lỗi keo, đường chỉ may (không bảo hành đế, form
+                                giày bị giãn do sử dụng)</li>
+                            <li>Phụ kiện: Bảo hành từ 1-3 tháng tùy loại sản phẩm</li>
+                            <li>Quần áo, vớ, găng tay: Không áp dụng bảo hành</li>
+                        </ul>
+                        <p style = "font-size: 1rem;" class="weight-3 py-3 mt-3">Quy trình bảo hành: Gửi sản phẩm về cửa hàng hoặc qua đường bưu
+                            điện kèm phiếu bảo hành. Thời gian xử lý bảo hành từ 7-15 ngày tùy tình trạng sản phẩm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer bg-dark py-4">
         <div class="container px-4">
             <div class="d-flex flex-column flex-sm-row justify-between items-center">
@@ -59,6 +360,9 @@
             </div>
         </div>
     </footer>
+
     <script type="module" src="src/assets/js/main.js"></script>
+    <script src="src/assets/js/pages/faq.js"></script>
 </body>
+
 </html>

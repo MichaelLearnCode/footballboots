@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .btn-outline-dark{
+        .btn-outline-dark {
             border: 2px solid #212529;
             color: #212529;
         }
-        .btn-outline-dark:hover{
+
+        .btn-outline-dark:hover {
             background-color: #dedede;
         }
+
         .slogan {
             font-size: 0.75rem;
         }
-        
+
         .profile {
             position: relative;
             height: 75vw;
@@ -27,7 +32,7 @@
             max-width: 40rem;
             background-color: #212529;
         }
-        
+
         .profile .profile-img {
             height: 80vw;
             max-height: 45rem;
@@ -36,107 +41,113 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        
+
         .profile .dots-1 {
             position: absolute;
             width: 3vw;
             right: 1.5vw;
             top: 4vw;
         }
-        
+
         .profile .dots-2 {
             position: absolute;
             width: 3vw;
             right: -4vw;
             top: 6.05vw;
         }
-        
+
         .profile .dots-3 {
             position: absolute;
             width: 3vw;
             left: 1.5vw;
             bottom: 6.05vw;
         }
-        
+
         .profile .dots-4 {
             position: absolute;
             width: 3vw;
             left: -4vw;
             bottom: 4vw;
         }
-        
-        .profile .dots-1 svg, .profile .dots-3 svg {
+
+        .profile .dots-1 svg,
+        .profile .dots-3 svg {
             fill: #fff;
         }
-        
-        .profile .dots-2 svg, .profile .dots-4 svg {
+
+        .profile .dots-2 svg,
+        .profile .dots-4 svg {
             fill: #212529;
         }
+
         .main-title {
             font-size: 2.4rem;
             font-weight: 800;
         }
-        
+
         /* sm */
-        @media(min-width: 576px){
+        @media(min-width: 576px) {
             .profile {
                 height: 60vw;
                 width: 60vw;
             }
-        
+
             .profile .profile-img {
                 height: 65vw;
             }
         }
-        
+
         /* md */
-        @media(min-width: 768px){
+        @media(min-width: 768px) {
             .profile {
                 height: 50vw;
                 width: 50vw;
             }
+
             .profile .profile-img {
                 height: 55vw;
             }
         }
-        
+
         /* lg */
-        @media(min-width: 992px){
+        @media(min-width: 992px) {
             .profile {
                 height: 40vw;
                 width: 40vw;
             }
+
             .profile .profile-img {
                 height: 45vw;
             }
-        
+
             .profile .dots-1 {
                 width: 1.5vw;
                 right: 0.75vw;
             }
-        
+
             .profile .dots-2 {
                 width: 1.5vw;
                 right: -2vw;
             }
-        
+
             .profile .dots-3 {
                 width: 1.5vw;
                 left: 0.75vw;
             }
-        
+
             .profile .dots-4 {
                 width: 1.5vw;
                 left: -2vw;
             }
         }
-        
+
         /* xl */
-        @media(min-width: 1200px){
+        @media(min-width: 1200px) {
             .profile {
                 height: 35vw;
                 width: 35vw;
             }
+
             .profile .profile-img {
                 height: 40vw;
             }
@@ -144,57 +155,92 @@
     </style>
     <title>Trang chủ</title>
 </head>
+
 <body>
-    <header>
-        <nav class = "nav bg-dark position-sticky">
+    <header class="header-with-nav">
+        <nav class="nav bg-dark">
             <div class="container d-flex flex-column flex-md-row justify-between items-md-center">
                 <div class="d-flex justify-between items-center">
-                    <a href="index.html" class = "text-decoration-none d-flex items-center"><img width="60" src = "src/assets/images/img_brand.png"/><h3 class = "py-2 text-white weight-3">FOOTBALL BOOTS</h3></a>
-                    <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
-                        <i class="fa-solid fa-bars text-white"></i>
+                    <a href="index.html" class="text-decoration-none d-flex items-center"><img width="60"
+                            src="src/assets/images/img_brand.png" />
+                        <h3 class="py-2 text-white weight-3">FOOTBALL BOOTS</h3>
+                    </a>
+                    <div class="d-flex items-center">
+                        <div class="user-wrapper-mobile">
+                            <a href="login.html" class="login-btn d-md-none text-white me-3 text-decoration-none">Đăng
+                                nhập</a>
+                        </div>
+                        <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
+                            <i class="fa-solid fa-bars text-white"></i>
+                        </div>
                     </div>
                 </div>
                 <ul class="text-white d-md-flex collasped nav-menu">
-                    <li><a href="about.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
-                    <li><a href="products.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
-                    <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ hàng</a></li>
-                    <li><a href="career.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
+                    <li><a href="about.html"
+                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
+                    <li><a href="products.html"
+                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
+                    <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ
+                            hàng</a></li>
+                    <li><a href="career.html"
+                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Tuyển dụng</a></li>
                     <li class="dropdown js-dropdown-nav-item">
-                        <span class="cursor-pointer text-white d-block px-md-3 nav-item py-2 h3">Khác<i class="fa-solid fa-chevron-down ms-2" style = "font-size: 0.8rem;"></i></span>
-                        <ul class="dropdown-menu position-static position-md-absolute js-dropdown-content rounded-0 border-0 shadow-sm">
-                            <li><a href="blog.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Tin tức</a></li>
-                            <li><a href="contact.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Liên hệ</a></li>
-                            <li><a href="faq.html" class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">FAQ</a></li>
+                        <span class="cursor-pointer text-white d-block px-md-3 nav-item py-2 h3">Khác<i
+                                class="fa-solid fa-chevron-down ms-2" style="font-size: 0.8rem;"></i></span>
+                        <ul
+                            class="dropdown-menu position-static position-md-absolute js-dropdown-content rounded-0 border-0 shadow-sm">
+                            <li><a href="blog.html"
+                                    class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Tin
+                                    tức</a></li>
+                            <li><a href="contact.html"
+                                    class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">Liên
+                                    hệ</a></li>
+                            <li><a href="faq.html"
+                                    class="ps-4 text-decoration-none d-block px-md-3 nav-item dropdown-nav-item py-2 h3">FAQ</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </nav>
-    </header>
-    <section class="hero-section pb-14">
-        <div>
-            <div class="section-banner">
-                <img src="src/assets/images/img_banner_home.avif" class="w-100 banner-img" alt="">
-                <div class="banner-overlay"></div>
-                <div class="banner-content d-flex flex-column justify-center align-center">
-                    <h1 class="text-white banner-header weight-3 text-center mb-4">Khám phá Đỉnh Cao Bóng Đá</h1>
-                    <p class="text-medium h3 banner-description text-center px-14">Cùng chúng tôi chinh phục sân cỏ với những đôi giày bóng đá chính hãng, chất lượng vượt trội và phong cách đẳng cấp.</p>
+        <div class="sub-nav bg-white py-1 d-none d-md-block">
+            <div class="container d-flex items-center user-wrapper">
+                <a href="login.html"
+                    class="ms-auto login-btn d-none d-md-block text-black me-3 text-black text-decoration-none">Đăng nhập</a>
             </div>
         </div>
+    </header>
+    <section>
+        <div class="section-banner">
+            <img src="src/assets/images/img_banner_home.avif" class="w-100 banner-img" alt="">
+            <div class="banner-overlay"></div>
+            <div class="banner-content d-flex flex-column justify-center align-center">
+                <h1 class="text-white banner-header weight-3 text-center mb-4">Khám phá Đỉnh Cao Bóng Đá</h1>
+                <p class="text-medium h3 banner-description text-center px-14">Cùng chúng tôi chinh phục sân cỏ với
+                    những đôi giày bóng đá chính hãng, chất lượng vượt trội và phong cách đẳng cấp.</p>
+            </div>
+    </section>
+    <section class="hero-section py-14">
         <div class="container px-5 pb-5">
             <div class="row gx-5 items-center">
                 <div class="col-lg-5">
                     <div class="text-xxl-start text-center">
                         <div class="slogan-wrapper mb-4">
-                            <span class="text-uppercase weight-3 py-1 slogan rounded px-2 bg-dark text-white text-center">Chính hãng · Đa dạng · Thời trang</span>
+                            <span
+                                class="text-uppercase weight-3 py-1 slogan rounded px-2 bg-dark text-white text-center">Chính
+                                hãng · Đa dạng · Thời trang</span>
                         </div>
                         <span class="text-muted h3 weight-2">Giày bóng đá chính hãng</span>
                         <h1 class="display-3 weight-3 mb-5">
                             <div class="span text-dark main-title">Chất lượng tạo nên chiến thắng</div>
                         </h1>
                         <div class="cta d-flex justify-xxl-start flex-wrap flex-sm-row flex-column justify-center mb-3">
-                            <a href="products.html" class="btn bg-dark text-white weight-3 text-decoration-none me-sm-4 py-3 px-5 h3 mb-3 mb-sm-0">Mua ngay</a>
-                            <a href="about.html" class="btn btn-outline-dark weight-3 text-decoration-none py-3 px-5 h3">Tìm hiểu thêm</a>
+                            <a href="products.html"
+                                class="btn bg-dark text-white weight-3 text-decoration-none me-sm-4 py-3 px-5 h3 mb-3 mb-sm-0">Mua
+                                ngay</a>
+                            <a href="about.html"
+                                class="btn btn-outline-dark weight-3 text-decoration-none py-3 px-5 h3">Tìm hiểu
+                                thêm</a>
                         </div>
                     </div>
                 </div>
@@ -204,41 +250,77 @@
                             <img src="src/assets/images/img_messi.png" alt="Lionel Messi" class="profile-img">
                             <!-- dot-1 -->
                             <div class="dots-1">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4"
+                                    xml:space="preserve">
                                     <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                        <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                        <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                        <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                                        <path
+                                            d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z">
+                                        </path>
+                                        <path
+                                            d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z">
+                                        </path>
+                                        <path
+                                            d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z">
+                                        </path>
                                     </g>
                                 </svg>
                             </div>
                             <!--dot-2-->
                             <div class="dots-2">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4"
+                                    xml:space="preserve">
                                     <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                        <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                        <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                        <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                                        <path
+                                            d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z">
+                                        </path>
+                                        <path
+                                            d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z">
+                                        </path>
+                                        <path
+                                            d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z">
+                                        </path>
                                     </g>
                                 </svg>
                             </div>
                             <!--dot-3-->
                             <div class="dots-3">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4"
+                                    xml:space="preserve">
                                     <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                        <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                        <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                        <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                                        <path
+                                            d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z">
+                                        </path>
+                                        <path
+                                            d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z">
+                                        </path>
+                                        <path
+                                            d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z">
+                                        </path>
                                     </g>
                                 </svg>
                             </div>
                             <!--dot-4-->
                             <div class="dots-4">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4"
+                                    xml:space="preserve">
                                     <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)">
-                                        <path d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"></path>
-                                        <path d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"></path>
-                                        <path d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"></path>
+                                        <path
+                                            d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z">
+                                        </path>
+                                        <path
+                                            d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z">
+                                        </path>
+                                        <path
+                                            d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z">
+                                        </path>
                                     </g>
                                 </svg>
                             </div>
@@ -249,7 +331,7 @@
         </div>
     </section>
     <section>
-        
+
     </section>
     <footer class="footer bg-dark py-4">
         <div class="container px-4">
@@ -267,6 +349,7 @@
             </div>
         </div>
     </footer>
-    <script type = "module" src="src/assets/js/main.js"></script>
+    <script type="module" src="src/assets/js/main.js"></script>
 </body>
+
 </html>

@@ -8,49 +8,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .product-card {
-            transition: transform 0.3s;
-            overflow: hidden;
-            cursor: pointer;
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
+        .login-card {
+            width: 100%;
+            max-width: 500px;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
 
-        .product-img {
-            aspect-ratio: 1 / 1;
-            object-fit: contain;
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-input {
+            margin-right: 0.5rem;
         }
     </style>
-    <title>Products</title>
+    <title>Đăng nhập | Football Boots</title>
 </head>
 
 <body>
-    <header class="header-with-nav">
-        <nav class="nav bg-dark">
+    <header>
+        <nav class="nav bg-dark position-sticky">
             <div class="container d-flex flex-column flex-md-row justify-between items-md-center">
                 <div class="d-flex justify-between items-center">
                     <a href="index.html" class="text-decoration-none d-flex items-center"><img width="60"
                             src="src/assets/images/img_brand.png" />
                         <h3 class="py-2 text-white weight-3">FOOTBALL BOOTS</h3>
                     </a>
-                    <div class="d-flex items-center">
-                        <div class="user-wrapper-mobile">
-                            <a href="login.html" class="login-btn d-md-none text-white me-3 text-decoration-none">Đăng
-                                nhập</a>
-                        </div>
-                        <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
-                            <i class="fa-solid fa-bars text-white"></i>
-                        </div>
+                    <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
+                        <i class="fa-solid fa-bars text-white"></i>
                     </div>
                 </div>
                 <ul class="text-white d-md-flex collasped nav-menu">
                     <li><a href="about.html"
                             class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giới thiệu</a></li>
                     <li><a href="products.html"
-                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3 text-primary">Sản
-                            phẩm</a></li>
+                            class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Sản phẩm</a></li>
                     <li><a href="cart.html" class="text-white text-decoration-none d-block px-md-3 nav-item py-2 h3">Giỏ
                             hàng</a></li>
                     <li><a href="career.html"
@@ -74,47 +86,43 @@
                 </ul>
             </div>
         </nav>
-        <div class="sub-nav bg-white py-1 d-none d-md-block">
-            <div class="container d-flex items-center user-wrapper">
-                <a href="login.html"
-                    class="ms-auto login-btn d-none d-md-block text-black me-3 text-decoration-none">Đăng nhập</a>
-            </div>
-        </div>
     </header>
-    <section>
-        <div class="section-banner">
-            <img src="src/assets/images/img_banner_products.avif" class="w-100 banner-img" alt="">
-            <div class="banner-overlay"></div>
-            <div class="banner-content d-flex flex-column justify-center align-center">
-                <h1 class="text-white mb-4 banner-header weight-3 text-center">Sản phẩm nổi bật</h1>
-                <p class="text-medium h3 banner-description text-center px-14">Khám phá bộ sưu tập giày bóng đá đỉnh
-                    cao, thiết kế hiện đại và hiệu suất vượt trội dành riêng cho bạn.</p>
-            </div>
-        </div>
-    </section>
 
-    <section style="min-height: 70vh;" class="py-5">
-        <div class="container px-4">
-            <div class="mb-5">
-                <h2 class="text-center weight-3">Tất cả sản phẩm</h2>
-                <p class="text-center text-secondary h4">Khám phá các sản phẩm giày bóng đá chính hãng</p>
+    <div class="login-container py-10">
+        <div class="login-card">
+            <div class="text-center mb-5">
+                <img src="src/assets/images/img_brand.png" alt="Football Boots Logo" class="mb-0" width="100">
+                <h1 class="weight-3 mb-3">Đăng nhập</h1>
+                <p class="text-secondary mb-0">Chào mừng bạn quay trở lại với Football Boots! Hãy nhập thông tin bên
+                    dưới để đăng nhập</p>
             </div>
-            <div class="search-wrapper w-100 row justify-center">
-                <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
-                    <form action="" style="max-width: unset;" class="gap-0 gx-4 form row p-0 mb-5 flex-md-row">
-                        <div class="col-12 col-md-9 mb-3 mb-md-0">
-                            <input type="text" class="form-control" id="search-input" placeholder="Tìm kiếm sản phẩm...">
-                        </div>
-                        <div class="col-12 col-md-3"><button class="bg-dark text-white rounded-1 cursor-pointer btn px-4 py-4 w-100" id="search-btn">Tìm kiếm</button></div>
-                    </form>
+
+            <form class="login-form d-flex flex-column form pt-0 pb-5">
+                <div class="error-message text-error"></div>
+                <label for="email">Email <span class="text-error">*</span></label>
+                <input type="email" id="email" name="email" class="form-control px-3 py-2"
+                    placeholder="Nhập email của bạn" required>
+                <label for="password">Mật khẩu <span class="text-error">*</span></label>
+                <input type="password" id="password" name="password" class="form-control px-3 py-2"
+                    placeholder="Nhập mật khẩu của bạn" required>
+
+                <div class="remember-forgot">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="remember" name="remember" class="checkbox-input">
+                        <label for="remember">Ghi nhớ tôi</label>
+                    </div>
+
+                    <a href="#" class="text-decoration-none">Quên mật khẩu?</a>
                 </div>
-            </div>
-            <div class="products-container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 products-wrapper">
-                </div>
-            </div>
+
+                <button type="submit" class="btn login-button bg-dark text-white p-3 h3 mb-3">Đăng nhập</button>
+
+                <p class="text-center">Chưa có tài khoản? <a href="#" class="text-primary text-decoration-none">Đăng ký
+                        ngay</a></p>
+            </form>
+
         </div>
-    </section>
+    </div>
 
     <footer class="footer bg-dark py-4">
         <div class="container px-4">
@@ -133,7 +141,7 @@
         </div>
     </footer>
     <script type="module" src="src/assets/js/main.js"></script>
-    <script type="module" src="src/assets/js/pages/product.js"></script>
+    <script type="module" src="src/assets/js/pages/login.js"></script>
 </body>
 
 </html>

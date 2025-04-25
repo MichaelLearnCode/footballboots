@@ -1,24 +1,30 @@
 import { Api } from "../../../api/api.js";
+import { debounce } from "../utils.js";
 
 document.addEventListener('DOMContentLoaded', async () => {
     const productsWrapper = document.querySelector('.products-wrapper');
     const api = Api().init();
     
-    for (let i = 0; i < 8; i++) {
-        productsWrapper.innerHTML += `
-        <div class="col">
-            <div class="card mt-4 card-product">
-                <div class="skeleton w-100" style="aspect-ratio: 1 / 1;"></div>
-                <div class="card-body">
-                    <div class="skeleton skeleton-text mb-3"></div>
-                    <div class="d-flex justify-between">
-                        <div class="skeleton skeleton-text" style="width: 40%;"></div>
-                        <div class="skeleton skeleton-text" style="width: 30%;"></div>
+    function renderSkeleton() {
+        productsWrapper.innerHTML = "";
+        for (let i = 0; i < 8; i++) {
+            productsWrapper.innerHTML += `
+            <div class="col">
+                <div class="card mt-4 card-product">
+                    <div class="skeleton w-100" style="aspect-ratio: 1 / 1;"></div>
+                    <div class="card-body">
+                        <div class="skeleton skeleton-text mb-3"></div>
+                        <div class="d-flex justify-between">
+                            <div class="skeleton skeleton-text" style="width: 40%;"></div>
+                            <div class="skeleton skeleton-text" style="width: 30%;"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>`
+            </div>`
+        }
     }
+    renderSkeleton();
+    
     
     try {
         const products = await api.get('/products');
@@ -29,7 +35,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             <h3 class="text-danger">Không thể tải sản phẩm. Vui lòng thử lại sau.</h3>
         </div>`;
     }
-    
+
+    const updateSearchSuggestion = debounce((input) => {
+        renderSearchSuggestion(input);
+    });
+
+    async function renderSearchSuggestion(input) {
+        renderSkeleton();
+        const products = await api.get('/products', {
+            custom: (product) => {
+                return input? product.name.toLowerCase().includes(input.toLowerCase()) : true;
+            }
+        });
+        renderProducts(products);
+    }
+
+
     function renderProducts(products) {
         productsWrapper.innerHTML = '';
         
@@ -62,4 +83,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
         }).join('');
     }
+    const searchInputEle = document.querySelector('#search-input');
+    searchInputEle.addEventListener('input', (e) => {
+        const inputValue = e.target.value.trim();
+        updateSearchSuggestion(inputValue);
+    })
 });

@@ -44,16 +44,18 @@
 </head>
 
 <body>
-    <header>
-        <nav class="nav bg-dark position-sticky">
+    <header class="header-with-nav">
+        <nav class="nav bg-dark">
             <div class="container d-flex flex-column flex-md-row justify-between items-md-center">
                 <div class="d-flex justify-between items-center">
-                    <a href="index.html" class="text-decoration-none d-flex items-center"><img width="60"
-                            src="src/assets/images/img_brand.png" />
-                        <h3 class="py-2 text-white weight-3">FOOTBALL BOOTS</h3>
-                    </a>
-                    <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
-                        <i class="fa-solid fa-bars text-white"></i>
+                    <a href="index.html" class="text-decoration-none d-flex items-center"><img width="60" src="src/assets/images/img_brand.png"/><h3 class="py-2 text-white weight-3">FOOTBALL BOOTS</h3></a>
+                    <div class="d-flex items-center">
+                        <div class="user-wrapper-mobile">
+                            <a href="login.html" class="login-btn d-md-none text-white me-3 text-decoration-none">Đăng nhập</a>
+                        </div>
+                        <div class="d-flex items-center d-md-none p-2 cursor-pointer nav-item menu-toggle">
+                            <i class="fa-solid fa-bars text-white"></i>
+                        </div>
                     </div>
                 </div>
                 <ul class="text-white d-md-flex collasped nav-menu">
@@ -72,21 +74,25 @@
                 </ul>
             </div>
         </nav>
+        <div class="sub-nav bg-white py-1 d-none d-md-block">
+            <div class="container d-flex items-center user-wrapper">
+                <a href="login.html" class="ms-auto login-btn d-none d-md-block text-black me-3 text-decoration-none">Đăng nhập</a>
+            </div>
+        </div>
     </header>
-    <section>
+    <section style="min-height: 90vh;">
         <div class="container py-4">
             <h1 class="mb-4">Giỏ hàng</h1>
             <table class="cart-container bg-white rounded overflow-hidden shadow-sm w-100">
                 <thead>
                     <tr>
-                        <th>Hình ảnh</th>
-                        <th>Tên sản phẩm</th>
+                        <th>Sản phẩm</th>
                         <th>Giá</th>
                         <th>Số lượng</th>
                         <th>Tổng tiền</th>
                     </tr>
                 </thead>
-                <tbody class="table-body">
+                <tbody class="cart-table-body">
 
                 </tbody>
             </table>
@@ -118,65 +124,7 @@
         </div>
     </footer>
     <script type="module" src="src/assets/js/main.js"></script>
-    <script type="module">
-        // JavaScript để xử lý giỏ hàng (nếu cần)
-        const cartData = [
-            {
-                image: 'src/assets/images/img_cart_item_1.jpg',
-                name: 'Giày bóng đá Nike',
-                price: 1500000,
-                quantity: 1
-            },
-            {
-                image: 'src/assets/images/img_cart_item_1.jpg',
-                name: 'Giày bóng đá Nike',
-                price: 1500000,
-                quantity: 1
-            },
-            {
-                image: 'src/assets/images/img_cart_item_1.jpg',
-                name: 'Giày bóng đá Nike',
-                price: 1500000,
-                quantity: 1
-            },
-            {
-                image: 'src/assets/images/img_cart_item_1.jpg',
-                name: 'Giày bóng đá Nike',
-                price: 1500000,
-                quantity: 1
-            },
-            // Thêm nhiều sản phẩm khác ở đây
-        ];
-        function updateQuantity(index, value) {
-            // Cập nhật số lượng trong mảng dữ liệu
-            cartData[index].quantity = parseInt(value);
-            // Gọi lại hàm renderCart để cập nhật giao diện
-            renderCart();
-        }
-
-        function renderCart() {
-            const tableBody = document.querySelector('.table-body');
-            tableBody.innerHTML = ''; // Xóa nội dung hiện tại
-            let total = 0; // Biến để tính tổng tiền
-
-            cartData.forEach((item, index) => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                <td><img src="${item.image}" alt="${item.name}"></td>
-                <td>${item.name}</td>
-                <td>${item.price.toLocaleString()} VNĐ</td>
-                <td><input onchange="updateQuantity(${index}, this.value)" type="number" value="${item.quantity}" min="1"></td>
-                <td>${(item.price * item.quantity).toLocaleString()} VNĐ</td>
-            `;
-                tableBody.appendChild(row);
-                total += item.price * item.quantity; // Cộng dồn tổng tiền
-            });
-
-            document.querySelector('.checkout-total').textContent = total.toLocaleString() + ' VNĐ'; // Cập nhật tổng tiền
-        }
-
-        renderCart();
-    </script>
+    <script type="module" src="src/assets/js/pages/cart.js"></script>
 </body>
 
 </html>
